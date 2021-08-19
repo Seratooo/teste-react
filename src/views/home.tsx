@@ -1,22 +1,19 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
 
-import { Layout, Logo } from '../components';
-import { Routes, RoutesEnum } from '../constants/routes';
+import { Layout } from '../components';
+import AboutSection from '../components/AboutSection';
+import HeaderPricipal from '../components/Header';
+import HeaderSlide from '../components/HeaderSlide';
+import MyServicesSection from '../components/MyServicesSection';
 import { View } from '../elements';
 
 const Home: FC = () => (
   <Layout pageTitle="Home">
-    <View
-      bg="background"
-      p="XXXL"
-      borderRadius="S"
-      borderTopRightRadius="0"
-      borderTopLeftRadius="0"
-    >
-      <Logo />
-      <h1>Home</h1>
-      <Link to={Routes[RoutesEnum.OtherPage]}>Goto To Other Page &rarr; </Link>
+    <View>
+      <HeaderPricipal />
+      <HeaderSlide />
+      <AboutSection />
+      <MyServicesSection />
     </View>
   </Layout>
 );

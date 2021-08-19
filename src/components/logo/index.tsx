@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-import { LogoSVG } from '../svg';
+import LogoTipo from '../../assets/logo.png';
 import { LogoWrapper } from './logo.styles';
 
 const Logo: FC = () => (
   <LogoWrapper>
-    <LogoSVG />
+    <img src={LogoTipo} alt="Logotipo" />
   </LogoWrapper>
 );
 
