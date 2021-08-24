@@ -1,23 +1,12 @@
-import styled from '@emotion/styled';
 import React, { FC } from 'react';
-import {
-  border,
-  color,
-  compose,
-  flexbox,
-  grid,
-  layout,
-  space,
-  typography,
-} from 'styled-system';
 
 import { LightTheme } from '../../design-system';
-import { FlexView, TEXT } from '../../elements';
+import { FlexView, Text } from '../../elements';
+import { GridView } from '../../elements/grid-view';
+import { Title } from '../shared/titles';
 import CardElement from './card';
 
-const Title = styled.h1(compose(space, typography, color));
-const GridView = styled.div(compose(space, layout, grid, border, flexbox));
-const MyServicesSection: FC = () => {
+const ServicesSection: FC = () => {
   return (
     <FlexView
       textAlign="center"
@@ -27,7 +16,7 @@ const MyServicesSection: FC = () => {
       flexDirection="column"
     >
       <Title margin="1.5rem 0px">My Services</Title>
-      <TEXT
+      <Text
         width="60%"
         margin="auto"
         mb="2rem"
@@ -36,10 +25,9 @@ const MyServicesSection: FC = () => {
         Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus,
         nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis
         quis leo.
-      </TEXT>
+      </Text>
 
       <GridView
-        display="grid"
         gridTemplateColumns="repeat(auto-fit,minmax(300px,3fr))"
         gridGap="10px"
       >
@@ -54,4 +42,4 @@ const MyServicesSection: FC = () => {
   );
 };
 
-export default MyServicesSection;
+export default ServicesSection;

@@ -6,14 +6,19 @@ import {
   color,
   compose,
   layout,
+  shadow,
   space,
+  system,
   typography,
 } from 'styled-system';
 
 import { ViewProps } from './view.types';
 
 const View: FC<ViewProps> = styled.div(
-  compose(color, space, border, layout, typography, background)
+  compose(color, space, shadow, border, layout, typography, background),
+  system({
+    transition: true,
+  })
 );
 
 export default View;

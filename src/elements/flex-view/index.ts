@@ -14,6 +14,9 @@ import {
 import { FlexViewProps } from './flex-view.types';
 
 const FlexView: FC<FlexViewProps> = styled.div(
+  {
+    display: 'flex',
+  },
   compose(color, space, border, layout, typography, background, flexbox)
 );
 
